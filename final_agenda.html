@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup of Brightspace</title>
+    <link rel="stylesheet" href="updated_agenda.css">
+</head>
+<body>
+    <header>
+        <h1>My Lovespace</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-panel">
+            <h2>My memories</h2>
+            <div class="courses">
+                <!-- You would dynamically populate this section with courses from your database -->
+                <!-- For now, I'm providing static representations -->
+                <div class="course">
+                    <img src="img5.jpeg" alt="Course Image">
+                    <div class="course-text">I Love U</div>
+                </div>
+                <!-- Additional courses would be added similarly -->
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h2>System Announcements</h2>
+            <h3 style="color: #0057b8;">Lovespace error: "Error retrieving credentials"</h3>
+            <p><strong>Posted: 13 October 2023 10:27</strong></p>
+            <p>Some users might see an error message pop up when trying to access a course offering in Brightspace stating "Error retrieving credentials".</p>
+            <p><strong>Start:</strong> Wednesday 11 October 2023 9:00</p>
+            <p><strong>Status:</strong> The supplier has investigated this issue and states that the error can be resolved by clearing the cache and cookies of your browser.</p>
+            <p><strong>Affected Users:</strong> Users will see an error message pop up when trying to access a course offering in Brightspace stating "Error retrieving credentials". Users will be able to use Brightspace without any issues after dismissing the error message, but the error message will show up again when accessing another course offering.</p>
+            <p>All users are advised to clear cookies and cache in case they still experience issues using Brightspace.</p>
+            <p><i>We Apologize for any inconvenience caused.</i></p>
+        </div>
+    </div>
+
+    <footer>
+        Hi Kirsten, Welcome to Lovespace!
+    </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Sample courses data
+    const courses = [
+        { image: "img1.jpeg", text: "High on love" },
+        { image: "img2.jpeg", text: "Going to get late" },
+        { image: "img3.jpeg", text: "we are still high" },
+        { image: "img4.jpeg", text: "High from a different angle" }
+    ];
+
+    // Select the course container
+    const courseContainer = document.querySelector(".courses");
+
+    // Populate the courses dynamically
+    courses.forEach(course => {
+        const courseDiv = document.createElement("div");
+        courseDiv.classList.add("course");
+        
+        const courseImg = document.createElement("img");
+        courseImg.src = course.image;
+        courseImg.alt = "Course Image";
+        
+        const courseText = document.createElement("div");
+        courseText.classList.add("course-text");
+        courseText.textContent = course.text;
+        
+        courseDiv.appendChild(courseImg);
+        courseDiv.appendChild(courseText);
+        courseContainer.appendChild(courseDiv);
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Select the announcement header and content
+    const announcementHeader = document.querySelector(".right-panel h3");
+    const announcementContent = document.querySelector(".right-panel").querySelectorAll("p:not(:last-child)");
+
+    // Hide the announcement content by default
+    announcementContent.forEach(p => p.style.display = "none");
+
+    // Toggle visibility on click
+    announcementHeader.addEventListener("click", function() {
+        const isHidden = announcementContent[0].style.display === "none";
+        
+        announcementContent.forEach(p => p.style.display = isHidden ? "block" : "none");
+    });
+});
+</script>
+</body>
+</html>
+
+
