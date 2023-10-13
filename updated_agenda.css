@@ -1,21 +1,74 @@
+/* Cute Cat Pic Button */
+#catPicBtn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF85A3; /* I picked a cute pink, feel free to adjust */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#catPicBtn:hover {
+    background-color: #FF6390; /* Slightly darker pink for hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e8e8e8;
-    color: #333;
+    background-color: #faf3e0; /* Soft Cream Background */
+    color: #6b4e4d; /* Muted Text Color */
     margin: 0;
 }
 
 header {
-    background-color: #0057b8;
+    background-color: #e76f51; /* Warm Coral for the Header */
     padding: 10px 30px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 3px double #e8a292; /* Double Border to Add a Touch */
 }
 
 header h1 {
     color: white;
     margin: 0;
-    font-size: 20px;
+    font-size: 24px; /* Increased for Emphasis */
+    font-style: italic; /* Italics for a Gentle Touch */
 }
 
 .container {
@@ -27,15 +80,15 @@ header h1 {
 .left-panel, .right-panel {
     width: 48%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffe5d9; /* Soft Peach Panels */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 18px;
-    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px; /* Increased for Emphasis */
+    border-bottom: 2px dotted #e8a292; /* Dotted Line for a Whimsical Touch */
     padding: 10px 0;
-    color: #0057b8;
+    color: #e76f51; /* Warm Coral to Match Header */
     margin: 0;
 }
 
@@ -46,31 +99,31 @@ h2 {
 }
 
 .course {
-    border: 1px solid #ccc;
+    border: 2px solid #f9c2bf; /* Light Border Color */
     padding: 10px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: #fff1e6; /* Soft Cream Background for Courses */
+    border-radius: 10px; /* Increased Border Radius for Softer Edges */
 }
 
 .course img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .course-text {
-    color: #0057b8;
+    color: #e76f51; /* Warm Coral Text Color */
     font-weight: bold;
 }
 
 footer {
     padding: 20px 30px;
-    background-color: #0057b8;
+    background-color: #e76f51; /* Warm Coral Footer */
     color: white;
     text-align: center;
+    font-style: italic; /* Italics for a Gentle Touch */
 }
-
 
 /* Media queries for responsive design */
 @media only screen and (max-width: 768px) {
